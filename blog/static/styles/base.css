@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+.navbar{
+    width: 100%;
+    height: 10vh;
+    box-sizing: border-box;
+}
+
+.navbar .all-items{
+    padding-left: 15%;
+    padding-right: 10vh;
+    padding-top: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    color: whitesmoke;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+
+
+.navbar .all-items .empty{
+    width: 30%;
+}
+
+
+.navbar .all-items li{
+    list-style: none;
+    font-size: larger;
+    font-weight: bold;
+    
+}
+
+.navbar a{
+    text-decoration: none;
+    color:  whitesmoke;
+}
+
+.navbar a:hover,
+.navbar a:active{
+    color: rgb(130, 125, 125) ;
+}
+
+#foot{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 15vh;
+    background-color: rgb(59, 54, 54);
+}
+
+
+
+.foot-contents ul{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left:60%;
+
+}
+
+.foot-contents li{
+    display: flex;
+    justify-content: center;
+width: 80px;
+
+list-style: none;
+
+}
+
+.foot-contents li a{
+text-decoration: none;
+   color: rgb(221, 214, 214);
+   font-size: larger;
+}
+
+.foot-contents li a:hover,
+
+.foot-contents li a:hover{
+  font-weight: bold;
+
+}
+
+#foot p{
+    text-align: center;
+}
+
+#foot p a{
+    text-decoration: none;
+    color: rgb(130, 125, 125);
+}
+
+
+
+#foot p a:hover,
+#foot p a:active{
+    color: rgb(130, 125, 125);
+    font-weight: bold; 
+}

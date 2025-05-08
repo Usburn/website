@@ -1,0 +1,50 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+
+
+{%block title%}  Zaro's website {% endblock %}
+
+
+{% block css_files %}
+<link rel="stylesheet" href="{%static "styles/base.css"%}">
+<link rel="stylesheet" href="{%static "styles/acceuil.css"%}">
+{% endblock css_files %}
+
+
+{%block content%} 
+
+
+<main class="main-part">
+    <div class="bienvenu">
+        <h1>Zaro's Website</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore aliquid dolores laudantium repellendus aperiam
+            possimus inventore, sequi magni odio rerum eum, magnam sed eos facilis odit 
+            voluptatibus! Tempore, corporis minima!</p>
+
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore aliquid dolores laudantium repellendus aperiam
+                possimus inventore, sequi magni odio rerum eum, magnam sed eos facilis odit 
+                voluptatibus! Tempore, corporis minima!</p>
+
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore aliquid dolores laudantium repellendus aperiam
+                    possimus inventore, sequi magni odio rerum eum, magnam sed eos facilis odit 
+                    voluptatibus! Tempore, corporis minima!</p>
+
+<div class="btn">
+    <button><a href="">Contact</a></button>
+</div>
+                  
+
+
+    </div>
+    <div class="zaro_image">
+        <img src="{% static "images/zaro3.png" %}" alt="zaro 's image">
+    </div>
+
+
+</main>
+
+
+{% endblock %}
