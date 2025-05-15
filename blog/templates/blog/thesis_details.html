@@ -1,13 +1,35 @@
 {%extends "blog/base.html"%}
+{% load static %}
 
 
 {%block title%} Thesis details {% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{%static "styles/base.css"%}">
+<link rel="stylesheet" href="{%static "styles/thesis_details.css"%}">
+{% endblock %}
 
 
 {% block content %}
 
 
-<h1>Thesis details are here</h1>
+
+
+<section class="main-content">
+    <h1>{{thesis.title}}</h1>
+    {% if thesis.slug == "drugs" %}
+    <div class="restrictions">
+        <p>The data used in this thesis are confidential; therefore, I am not permitted to share the results or any detailed information publicly. On this page, I simply summarize my analysis. If you would like more information, feel free to contact me — I’d be happy to discuss it with you.
+
+        </p>
+    </div>
+
+    {% endif %}
+
+    <h3 class="summary">summary</h3>
+    {{thesis.content|safe}}
+
+</section>
 
 
 {% endblock  %}

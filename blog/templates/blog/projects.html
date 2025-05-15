@@ -1,14 +1,69 @@
 {% extends "blog/base.html" %}
+{% load static %}
 
 
 
 {%block title%}  Zaro's projects {% endblock %}
 
+{% block css_files %}
+<link rel="stylesheet" href="{%static "styles/base.css"%}">
+<link rel="stylesheet" href="{%static "styles/projects.css"%}">
+{% endblock %}
+
 
 {%block content%} 
 
 
-<h2>Projects are here</h2>
+<div class="main-part">
+  {%if projects%} 
+    <h1>All projects</h1>
+
+    {%for project in projects%}
+
+    <div class="project">
+
+        <div class="title">
+            <h2>{{project.title}}</h2>
+        </div>
+
+        <div class="date">
+            <h4>{{project.date}}</h4>
+        </div>
+       
+
+        <div class="content">
+          <p>{{project.excerpt}}</p>  
+        </div>
+
+        <div class="btn">
+          <a href="{%url "project_details" project.slug %}"> <button>Read more...</button></a> 
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+
+    {% else %}
+
+
+      <h1>There is no project yet</h1>
+
+  {%endif%}
+
+    
+
+
+
+</div>
+
+
+
+
+
+
+
+
 
 
 {% endblock %}

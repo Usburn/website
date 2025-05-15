@@ -1,0 +1,250 @@
+
+body{
+    background-color: rgb(240, 234, 223);
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
+}
+
+
+
+#main-part{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#main-part .items{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+main h2{
+  text-align: center ;
+}
+
+
+
+
+#main-part .items .thesis-image{
+    width: 17%;
+    height: 200px;
+
+  
+}
+
+
+
+#main-part .items .info{
+    width: 80%;
+    height: auto;
+  
+}
+
+
+
+#main-part .items .info h3{
+
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+#main-part .items .info h4{
+
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#main-part .items .info p {
+text-align: justify;
+}
+
+
+#main-part .items .thesis-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  
+}
+
+
+#main-part .items p{
+    margin: 0;
+}
+
+#main-part .items .btn{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: 40px;
+ margin-top: 10px;
+
+    
+}
+
+
+#main-part .items .btn button{
+       width: 110px;
+    height: 40px;
+    background-color:  transparent;
+    border-radius: 5px;
+
+
+}
+
+
+#main-part .items .btn button:hover,
+#main-part .items .btn button:active{
+   background-color:  rgb(38, 36, 36); 
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+
+@media screen and (max-width: 768px){
+    body, html{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+
+    #main-part{
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        box-sizing: border-box;
+    }
+    
+    #main-part .items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        min-height: 90vh;
+        height: auto;
+        box-sizing: border-box;
+    }
+    
+    main h2{
+      text-align: center ;
+    }
+    
+    
+    
+    
+    #main-part .items .thesis-image{
+        width: 250px;
+        height: auto;
+        border-radius: 50%;
+
+    
+      
+    }
+        
+    #main-part .items .thesis-image img{
+        width: 100%;
+        height: 100%;
+        border-radius:50%;
+      
+    }
+    
+    
+    
+    #main-part .items .info{
+        width: 90%;
+      
+    }
+    
+    
+    
+    #main-part .items .info h3{
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: medium;
+    }
+    
+    #main-part .items .info h4{
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: medium;
+    }
+    
+    #main-part .items .info p {
+    text-align: justify;
+    }
+    
+
+    
+    
+    #main-part .items p{
+        margin: 0;
+        font-size: medium;
+    }
+    
+    #main-part .items .btn{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    
+        
+    }
+    
+    
+    #main-part .items .btn button{
+        width: 110px;
+        height: 40px;
+        background-color:  rgb(84, 77, 77);
+        border-radius: 5px;
+        color: whitesmoke;
+    
+    }
+    
+    
+    #main-part .items .btn button:hover,
+    #main-part .items .btn button:active{
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+
+    
+
+
+    
+
+}

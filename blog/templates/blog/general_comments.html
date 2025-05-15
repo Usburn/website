@@ -1,0 +1,94 @@
+{%extends  "blog/base.html"%}
+{% load static %}
+
+
+
+
+{%block title%} Thesis details {% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{%static "styles/base.css"%}">
+<link rel="stylesheet" href="{%static "styles/form.css"%}">
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+<section class="main-content">
+
+
+    <form action="{%url "comment" %}" method = "POST" id="form">
+        
+    {% csrf_token %}
+
+    <div class="form-control extra {% if form.Last_name.errors %} errors {% endif %}">
+        {{form.Last_name.label}}
+        {{form.Last_name}}
+        {{form.Last_name.errors}}
+
+    </div>
+       
+   
+ <div class="form-control extra {% if form.First_name.errors %} errors {% endif %}"  >
+    {{form.First_name.label}}
+    {{form.First_name}}
+    {{form.First_name.errors}}
+
+ </div>
+  
+
+
+ <div class="form-control extra {% if form.Email.errors %} errors {% endif %}">
+    {{form.Email.label}}
+    {{form.Email}}
+    {{form.Email.errors}}
+
+
+ </div>
+
+
+ <div id="comment-label">
+    {{form.Comment.label}}
+</div>
+
+<div class="form-control  {% if form.Email.errors %} errors {% endif %}">
+   
+
+    <div class="comment">
+        {{form.Comment}}
+        {{form.Comment.errors}}
+
+    </div>
+  
+
+    
+</div>
+    
+
+
+
+
+ 
+
+
+
+
+    
+
+        <div class="btn">
+            <button type= "submit">Send</button>
+        </div>
+
+    </form>
+
+ 
+
+
+   
+</section>
+
+
+{% endblock  %}

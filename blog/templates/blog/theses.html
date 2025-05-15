@@ -1,14 +1,112 @@
 {% extends "blog/base.html" %}
+{% load static %}
 
 
 
 {%block title%}  Zaro's projects {% endblock %}
+{% block css_files %}
+<link rel="stylesheet" href="{%static "styles/base.css"%}">
+<link rel="stylesheet" href="{%static "styles/theses.css"%}">
+{% endblock %}
 
 
 {%block content%} 
 
+<main id="main">
+ 
+    <div id="main-part">
+        <h2>Preview of all my theses</h2>
 
-<h2>Thesis are here</h2>
+        <div class="items">
+            <div class="thesis-image">
+                <img src="{%static "images/drugs.jpg"%}" alt="Two people shaking hands"/>
+
+            </div>
+
+            <div class="info">
+                <h3>Enhancing Drug Expenditure Forecasting in Belgium
+                     Using ARIMA and ETS Models on Incomplete Time Series Data</h3>
+                    <h4>August  2023</h4>
+                    <p>Healthcare expenditure is rising worldwide. The global average share of healthcare care expenditure increased from 4.6 %
+                        of the GDP in 1970 to 9.0 % in 2016. In Belgium, healthcare costs account for about 10% of the GPD, and the government is 
+                        the primary sponsor of the health system. Therefore, there is a growing interest among policymakers to foresee future
+                        costs so they can plan ahead. IMA (Inter Mutualist Agency) provided secondary data on the healthcare costs reimbursements.
+                        However, the data is not up to date. For now, complete data is available at the individual level from 2013 up to 2020,
+                        with an additional aggregate dataset available for 2021, although not complete. Hence, the present study has two main objectives:
+                        First, it aims to incorporate information on the incomplete part of the data into the model in the hope of improving forecasting.
+                        Second, it investigates whether increasing historical data will help improve the model</p>
+                                    
+                        <div class="btn"> <a href="{% url "thesis_details" slug="drugs"%}"> <button>Read more...</button>  </a>  </div>    
+            </div>
+
+        </div>
+
+        <div class="items">
+            <div class="thesis-image">
+                <img src="{%static "images/trade.jpg"%}" alt="Two people shaking hands"/>
+
+            </div>
+
+            <div class="info">
+                <h3>Does Trade Liberalization counter food insecurity in Haiti?</h3>
+                    <h4>August  2021</h4>
+                <p>Despite tremendous strides in the fight against poverty across the globe during the last decades,
+                    food insecurity remains a significant concern worldwide, especially in developing countries. 
+                    The United Nations and other organizations such as WTO, WB, and IMF have elaborated policies to 
+                    offset this matter, yet the results are inconclusive. Trade liberalization is one of these policies 
+                    that aim to boost the world economy and challenge food insecurity globally.
+                    Although Haiti is one of the most open economies worldwide, the economic situation is alarming,
+                    where more than half of the population is highly food insecure. 
+                    This present study has two main objectives. First, it aims at investigating the 
+                    impact of trade liberalization on food security in Haiti. </p>
+
+                            <div class="btn"> <a href="{% url "thesis_details" slug="trade"%}"> <button>Read more...</button>  </a>  </div>   
+
+
+            </div>
+
+        </div>
+
+
+        <div class="items">
+            <div class="thesis-image">
+                <img src="{%static "images/credit.jpg"%}" alt="Two people shaking hands"/>
+
+            </div>
+
+            <div class="info">
+                <h3>Analysis of the impact of agricultural credit on farmers' income
+                     in the commune of La Croix-des-Bouquets</h2>
+                    <h4>April  2017</h4>
+                <p>It is clear that credit is an important and necessary tool for a country's economic development. Capital is generally 
+                    a limiting factor, and the use of external financing appears to be inevitable. However, FINCA Haiti S.A. has struggled to
+                    increase its agricultural credit client portfolio. This research aims to compare the per-hectare agricultural income of farms 
+                    that have benefited from agricultural credit with that of non-beneficiary farms,
+                    in order to highlight the importance of agricultural credit among beneficiaries and to identify the criteria that most
+                    influence credit demand, so that FINCA can expand its agricultural credit client base.
+            
+                     We start from the hypothesis that per-hectare agricultural incomes of beneficiaries are higher than those of non-beneficiaries,</p>
+
+
+                <div class="btn"> <a href="{% url "thesis_details" slug="credit"%}"> <button>Read more...</button>  </a>  </div>  
+            </div>
+
+        </div>
+
+        
+
+        
+
+
+    </div>
+
+    
+
+</main>
+
+
+
+
 
 
 {% endblock %}

@@ -1,0 +1,111 @@
+{%extends "blog/base.html"%}
+{% load static %}
+
+
+{%block title%} Thesis details {% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{%static "styles/base.css"%}">
+<link rel="stylesheet" href="{%static "styles/project-details.css"%}">
+{% endblock %}
+
+
+{% block content %}
+
+
+<main>
+
+    {% if comment_form.errors  %}
+
+
+    <div class="my-alert">
+        
+        <div class="alert">
+            <p>Saving the comment failed. Please check the  
+        <a href="#comment-form" class="fix">comment form</a> bellow to fix the errors.</p>
+        </div>
+    </div>
+
+     
+
+    
+    
+    {% endif %}
+
+
+    <div class="content">
+       <h1>{{project.title}}</h1> 
+
+       <h4>{{project.date}}</h4>
+
+       <p>{{project.content}}</p>
+
+    </div>
+
+
+
+   {% if comments %}
+<section id="comments">
+    <h3>All the comments</h3>
+    <ul id="comment-list">
+        {% for comment in comments %}
+        <li class="comment-item" {% if forloop.counter > 3 %}style="display: none;"{% endif %}>
+            <p>{{ comment.comment }}</p>
+            <h4>{{ comment.Last_name }} {{ comment.First_name }}</h4>
+        </li>
+        {% endfor %}
+    </ul>
+
+    {% if comments|length > 3 %}
+    <div class="btn"> <button id="toggle-comments" onclick="toggleComments()">Show all comments</button></div>
+   
+    {% endif %}
+</section>
+
+<script>
+    function toggleComments() {
+        const items = document.querySelectorAll('.comment-item');
+        const button = document.getElementById('toggle-comments');
+
+        const showingAll = button.innerText === "Show all comments";
+
+        items.forEach((item, index) => {
+            if (index >= 3) {
+                item.style.display = showingAll ? 'list-item' : 'none';
+            }
+        });
+
+        button.innerText = showingAll ? "Show less comments" : "Show all comments";
+    }
+</script>
+{% endif %}
+
+
+    
+
+    <div class="control-form" id="comment-form">
+        
+        <form action="{% url "project_details"  project.slug  %}" method = "POST" class="form">
+            {% csrf_token %}
+            <h4>Feel free to share your thoughts</h4>
+             {% for field in comment_form %}
+                <div class="label  {% if field.errors %}errors1{% endif %}  " > {{field.label}}</div>
+                <div class="field  {% if field.errors %}errors1{% endif %}"> {{field}}</div>
+                <div class="errors {% if field.errors %}errors1{% endif %}"> {{field.errors}}</div>
+   
+             {% endfor %}
+
+            <div class="btn">
+                 <button>Send</button>
+
+            </div>
+            
+
+        </form>
+    </div>
+   
+</main>
+
+
+
+{% endblock  %}
