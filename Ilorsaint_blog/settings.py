@@ -43,13 +43,13 @@ DEBUG = config("MY_DEBUG", cast = bool)
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    'web-l1uv.onrender.com'
+    'website-izd2.onrender.com'
 ]
 
    
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://web-l1uv.onrender.com",
+    "https://website-izd2.onrender.com",
 ]
 
 
