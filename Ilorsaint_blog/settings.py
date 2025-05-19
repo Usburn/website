@@ -37,6 +37,9 @@ ALLOWED_HOSTS = [
 
    
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://web-l1uv.onrender.com",
+]
 
 
 # Application definition
