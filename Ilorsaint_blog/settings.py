@@ -30,10 +30,11 @@ SECRET_KEY ="django-insecure-(on^uyv(44%3iz9wd@6+viuok79wikb-)ymlwbuir4kq^kbwsp"
 DEBUG = True  
 
 ALLOWED_HOSTS = [
-    'web-production-c336.up.railway.app',
-    '127.0.0.1',  
-    'localhost'
+    '127.0.0.1',
+    'localhost',
+    'web-l1uv.onrender.com'
 ]
+
    
 
 
