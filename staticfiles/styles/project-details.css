@@ -1,0 +1,215 @@
+body{
+     background-color: rgb(240, 234, 223);
+     margin: 0;
+     padding: 0;
+}
+main{
+    width: 100%;
+    min-height: 93vh;
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content{
+    padding: 40px;
+}
+.control-form{
+    margin-top: 100px;
+    margin-bottom: 30px;
+width: 100%;
+height: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
+}
+
+.content p {
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+
+.form{
+    padding-left: 20px;
+    width: 450px;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 7px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px) contrast(1) saturate(100%);
+
+
+}
+
+.form h4{
+    text-align: center;
+}
+
+.form input{
+    background-color: transparent;
+}
+
+.form textarea{
+    background-color: transparent;
+    margin-right: 20px;
+    width: 95%;
+    box-sizing: border-box;
+
+}
+
+.form, .label, .field, .errors{
+    margin-bottom: 5px;
+}
+
+
+.errorlist{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: rgb(78, 27, 27);
+}
+
+
+.errors1 input,textarea{
+    border-color:  rgb(78, 27, 27); 
+    background-color: rgb(215, 118, 118);
+}
+
+.errors1 textarea{
+    border-color:  rgb(78, 27, 27); 
+    background-color: rgb(215, 118, 118);
+}
+
+.label.errors1{
+    color: rgb(78, 27, 27);
+}
+
+.btn{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 30px;
+   margin-bottom: 30px;
+
+
+}
+
+.btn button{
+    width: 110px ;
+    height: 40px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.btn button:hover,
+.btn button:active{
+    background-color: rgb(38, 36, 36); 
+    color: whitesmoke;
+
+}
+
+.my-alert{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert{
+
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 50%;
+    border: 1px solid    rgb(78, 27, 27) ;
+    background-color: rgb(215, 118, 118);
+    padding: 20px;
+
+    
+
+}
+.alert p {
+    text-align: center;
+}
+
+
+.fix{
+    text-decoration: none;
+   font-weight: bold;
+   color: black;
+}
+
+#comments {
+    padding: 20px;
+    max-width:  70%;
+    margin-left: 15%;
+    margin-top: 60px;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 7px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px) contrast(1) saturate(100%);
+
+
+}
+
+
+#comments h3 {
+    text-align: center;
+}
+
+#comments li{
+list-style: none;
+border-bottom: 2px solid rgb(197, 186, 186) ;
+}
+
+#comments li:last-of-type{
+    border-bottom: none;
+}
+#comments li h4{
+    text-align: end;
+    color: rgb(82, 79, 79);
+}
+
+
+
+@media screen and (max-width: 768px){
+   #comments{  padding: 20px;
+    max-width:  90%;
+    margin-left: 5%;
+    margin-top: 60px;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 7px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px) contrast(1) saturate(100%);
+
+   }
+
+   
+.alert{
+
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 80%;
+    border: 1px solid    rgb(78, 27, 27) ;
+    background-color: rgb(215, 118, 118);
+    padding: 20px;
+
+    
+
+}
+
+}
+

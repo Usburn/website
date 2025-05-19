@@ -1,0 +1,38 @@
+
+
+body{
+    background-color: rgb(240, 234, 223);
+}
+
+h1{
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+.main-content{
+    margin: 0 50px 50px 50px;
+    line-height: 2rem;
+    min-height: 73vh;
+    
+}
+.main-content p{
+    text-align: justify;
+}
+
+.restrictions{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid black;
+    border-radius: 8px;
+color:rgb(225, 217, 217);
+    background-color: rgb(84, 50, 50);
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.restrictions p{
+    margin: 0;
+}
+

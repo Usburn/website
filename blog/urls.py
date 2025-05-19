@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path("", views.acceuil, name="acceuil" ),
@@ -10,4 +12,4 @@ urlpatterns = [
     path("projects/", views.projects, name="projects"),
     path("projects/<slug:slug>/", views.project_detail, name="project_details")
     
-]
+] + static(settings.STATIC_URL , document_root= settings.MEDIA_ROOT)

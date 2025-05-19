@@ -1,0 +1,175 @@
+.accueuilMobile{
+    display: none;
+}
+
+.accueuilEcran{
+    display: flex;
+}
+
+body{
+    background-color: rgb(84, 77, 77);
+    color: rgb(221, 214, 214);
+}
+
+.main-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 93vh;
+    box-sizing: border-box;
+
+}
+
+.zaro_image{
+    height: 100%;
+    width: auto;
+}
+
+.zaro_image img{
+    height: 100%;
+    width: auto;
+
+}
+
+.bienvenu{
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 70px;
+    
+ 
+
+}
+
+.bienvenu h1{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    color: rgb(13, 157, 229);
+    font-weight: bold;
+
+}
+
+.bienvenu p{
+    font-size: large;
+}
+
+
+.btn{
+    padding: 0;
+    margin-top: 30px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+}
+
+
+.btn .btn-link {
+    border: 0.5px solid whitesmoke;
+    border-radius: 7px;
+    font-size: large;
+    text-decoration: none;
+    color: rgb(13, 157, 229);
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+
+
+.btn .btn-link:hover{
+    background-color:rgb(13, 157, 229);
+    color:   rgb(221, 214, 214);;
+}
+
+
+
+
+@media screen and (max-width: 768px){
+    body, html{
+        margin: 0;
+        padding: 0;
+      
+
+    }
+
+    .accueuilMobile{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+
+    .accueuilEcran{
+        display: none;
+    }
+
+    .zaro_image{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: auto;
+        box-sizing: border-box;
+     
+    }
+    
+    .zaro_image img{
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    
+    }
+
+
+    
+
+.bienvenu *{
+ 
+    
+    margin: 0;
+    padding: 0;
+   
+   }
+   
+    
+.bienvenu{
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bienvenu h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: larger;
+}
+
+
+.bienvenu p{
+    text-align: center;
+    font-size: medium;
+}
+
+.btn{
+    margin-top: 20px;
+}
+
+}

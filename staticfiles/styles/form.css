@@ -1,0 +1,93 @@
+
+
+body{
+    background-color: rgb(240, 234, 223);
+}
+
+
+
+.main-content{
+    line-height: 2rem;
+    min-height: 73vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    
+}
+
+#form{
+
+    width: 26rem;
+    height: 28rem;
+    border-radius: 7px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px) contrast(1) saturate(100%);
+  
+
+}
+
+#form .form-control{
+
+    margin-left: 20px;
+}
+
+#form .form-control.extra{
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+#comment-label{
+    margin: 0;
+    margin-left: 20px;
+}
+
+.comment *{
+    margin: 0;
+}
+
+
+.btn{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 2.5rem;
+
+
+}
+
+.btn button{
+    width: 110px;
+    height: 40px;
+    border-radius: 7px;
+    background-color: transparent;
+    color: black;
+}
+
+.btn button:hover,
+.btn button:active{
+    background-color: rgb(38, 36, 36); 
+    color: whitesmoke;
+
+}
+
+
+.errorlist{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: rgb(78, 27, 27);
+}
+
+
+.errors input{
+    border-color:  rgb(78, 27, 27); 
+    background-color: rgb(215, 118, 118);
+}
+
+.errors label{
+    color: rgb(78, 27, 27);
+}
