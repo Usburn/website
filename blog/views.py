@@ -261,26 +261,43 @@ def project_detail(request, slug):
 
 
 
+# def comment(request):
+    
+    
+#     if request.method =="GET":
+#         form = GeneralCommentForm()
+            
+#     else:
+#         request_form = GeneralCommentForm(request.POST)
+#         if request_form.is_valid():
+#             request_form.save()
+#             return HttpResponseRedirect( "/thank_you")
+            
+#         else:
+#             return render(request, "blog/general_comments.html",{
+#             "form":request_form
+#         })
+            
+#     return render(request, "blog/general_comments.html",{
+#             "form":form
+#         })
+    
+    
+    
 def comment(request):
-    
-    
-    if request.method =="GET":
-        form = GeneralCommentForm()
-            
-    else:
-        request_form = GeneralCommentForm(request.POST)
-        if request_form.is_valid():
-            request_form.save()
-            return HttpResponseRedirect( "/thank_you")
-            
+    if request.method == "POST":
+        form = GeneralCommentForm(request.POST)
+        if form.is_valid():
+            print("Form is valid. Saving now.")
+            form.save()
+            return HttpResponseRedirect("/thank_you")
         else:
-            return render(request, "blog/general_comments.html",{
-            "form":request_form
-        })
-            
-    return render(request, "blog/general_comments.html",{
-            "form":form
-        })
+            print("Form is NOT valid.")
+            print(form.errors)  # This will print all validation errors
+    else:
+        form = GeneralCommentForm()
+    
+    return render(request, "blog/general_comments.html", {"form": form})
             
             
             
