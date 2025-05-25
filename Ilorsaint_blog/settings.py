@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from decouple import config
 from pathlib import Path
 from os import getenv
+import dj_database_url 
+import os
 
 
 
@@ -96,6 +98,14 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+database_url = config("DATABASE_URL")
+
+DATABASES['default'] = dj_database_url.parse(database_url)
+
+
+# #
 
 
 # Password validation
